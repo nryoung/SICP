@@ -1,0 +1,13 @@
+#lang racket
+(require rackunit)
+
+;;;Exercise 1.3.  Define a procedure that takes three numbers as arguments and
+;;;returns the sum of the squares of the two larger numbers. 
+
+(define (awesome a b c)
+  (cond ((and (> a b) (> c b)) (+ (expt a 2) (expt c 2)))
+        ((and (> b a) (> c a)) (+ (expt b 2) (expt c 2)))
+        (else (+ (expt a 2) (expt b 2)))))
+
+(check-equal? (awesome 72 3 113) 17953 "Check simple call")
+(check-equal? (awesome 11 11 11) 242 "Check when parameters are equivalent")
