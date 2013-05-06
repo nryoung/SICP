@@ -8,8 +8,9 @@
   ((if (> b 0) + -) a b))
 
 ;;;In English:
-;;;Procedure a-plus-abs-b returns the absolute value of b plus a or better said
-;;;"If b is greater then 0 return a + b, else return a - b.
+;;;Procedure a-plus-abs-b returns the absolute value of b plus a.
+;;;Or yet better said:
+;;;"If b is greater then 0 return a + b, else return a - (-b)"
 
 (a-plus-abs-b 5 13)
 ;;;18
